@@ -111,7 +111,7 @@ nav a:hover { color: var(--primary-blue); }
    ========================================= */
 .hero {
     /* Priority 1: Local Image (bg.jpg), Priority 2: Online Backup */
-    background: url('logo.jpg'), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: url('logo.jpg'), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920&auto=format&fit=crop');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -461,4 +461,5 @@ footer {
     
     .skills-img, .cta-img { margin-top: 30px; }
 }
+
 
