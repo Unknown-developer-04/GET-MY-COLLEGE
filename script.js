@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Simple validation visualization
+        // Validation Logic
         const inputs = form.querySelectorAll('input, select');
         let isValid = true;
         
@@ -20,28 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if(isValid) {
-            // Simulate form submission
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
             
             btn.innerText = 'Sending...';
-            btn.style.backgroundColor = '#16a34a'; // Green color
+            btn.style.backgroundColor = '#16a34a'; // Green Success
             
             setTimeout(() => {
-                alert('Success! Our counselor will call you shortly.');
+                alert('Success! We will contact you soon.');
                 form.reset();
                 btn.innerText = originalText;
-                btn.style.backgroundColor = ''; // Reset color
+                btn.style.backgroundColor = ''; // Reset
             }, 1500);
         }
     });
 
-    // Optional: Add scroll animation for other elements if needed
+    // Scroll Animation Trigger (Fade In)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     });
