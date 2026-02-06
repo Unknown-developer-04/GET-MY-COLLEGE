@@ -7,7 +7,7 @@
 }
 
 :root {
-    --primary-blue: #2563eb; /* Matches the blue buttons */
+    --primary-blue: #2563eb;
     --dark-blue: #1e3a8a;
     --text-dark: #333;
     --text-light: #666;
@@ -73,6 +73,9 @@ header {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 nav ul {
@@ -94,10 +97,11 @@ nav a {
     border-radius: 4px;
 }
 
-/* Hero Section */
+/* HERO SECTION - CORRECTED IMAGE */
 .hero {
-    background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-    min-height: 600px;
+    /* Brick University Image similar to your design */
+    background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -106,7 +110,9 @@ nav a {
 .hero .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    /* Dark gradient so text is readable */
+    background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4));
+    z-index: 1;
 }
 
 .hero-content {
@@ -117,17 +123,21 @@ nav a {
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    padding-top: 60px;
 }
 
 .hero-text {
     color: white;
     max-width: 50%;
+    padding-left: 20px;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-features {
@@ -141,22 +151,24 @@ nav a {
 }
 
 .hero-features i {
-    color: #4ade80; /* Green checkmark */
+    color: #4ade80;
     margin-right: 10px;
 }
 
-/* Animated Form Card */
+/* Form Animation */
 .hero-form-card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    /* Initial state for animation */
+    padding: 35px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    margin-right: 20px;
+    
+    /* Animation Properties */
     opacity: 0;
     transform: translateY(50px);
     animation: slideUpFade 1s ease-out forwards;
-    animation-delay: 0.5s; /* Delays animation slightly */
+    animation-delay: 0.2s;
 }
 
 @keyframes slideUpFade {
@@ -195,7 +207,7 @@ nav a {
     width: 100%;
 }
 
-/* Why Section */
+/* Features/Why Section */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -279,7 +291,7 @@ nav a {
 .testi-header {
     height: 80px;
     background: var(--primary-blue);
-    margin-bottom: -40px; /* Pulls image up */
+    margin-bottom: -40px; 
 }
 
 .testi-img img {
@@ -294,7 +306,7 @@ nav a {
 .testi-text { padding: 15px; font-style: italic; font-size: 0.9rem; color: #555; }
 
 /* CTA Section */
-.cta { background: #dbeafe; } /* Light blue bg */
+.cta { background: #dbeafe; }
 .cta-flex {
     display: flex;
     align-items: center;
@@ -320,6 +332,7 @@ footer {
     font-size: 2rem;
     color: var(--dark-blue);
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .footer-links ul { list-style: none; }
@@ -344,8 +357,8 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .hero-text { max-width: 100%; text-align: center; margin-bottom: 30px; }
-    .hero-form-card { width: 100%; }
+    .hero-text { max-width: 100%; text-align: center; margin-bottom: 30px; padding: 0; }
+    .hero-form-card { width: 100%; margin: 0; }
     .nav-container { flex-direction: column; gap: 10px; }
     nav ul { flex-wrap: wrap; justify-content: center; }
     .cta-flex, .skills-flex { flex-direction: column; text-align: center; }
