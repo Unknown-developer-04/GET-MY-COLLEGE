@@ -100,7 +100,7 @@ nav a {
 /* HERO SECTION - CORRECTED IMAGE */
 .hero {
     /* Brick University Image similar to your design */
-    background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -363,3 +363,4 @@ footer {
     nav ul { flex-wrap: wrap; justify-content: center; }
     .cta-flex, .skills-flex { flex-direction: column; text-align: center; }
 }
+
