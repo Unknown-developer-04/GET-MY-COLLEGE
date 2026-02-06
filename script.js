@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let isValid = true;
         
         inputs.forEach(input => {
-            if(input.value.trim() === '') {
+            if(input.value.trim() === '' || input.value === 'Select Course') {
                 isValid = false;
                 input.style.borderColor = 'red';
             } else {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.backgroundColor = '#16a34a'; // Green color
             
             setTimeout(() => {
-                alert('Thank you! Your details have been sent to Get My College team.');
+                alert('Success! Our counselor will call you shortly.');
                 form.reset();
                 btn.innerText = originalText;
                 btn.style.backgroundColor = ''; // Reset color
@@ -45,6 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // You can add class 'animate-on-scroll' to elements you want to fade in later
 });
