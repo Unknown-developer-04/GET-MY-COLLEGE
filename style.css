@@ -29,7 +29,9 @@ body {
     padding: 0 20px;
 }
 
+/* Update your .btn-primary to include display: inline-block */
 .btn-primary {
+    display: inline-block; /* Crucial: ensures margins and padding work correctly */
     background-color: var(--primary-blue);
     color: white;
     padding: 12px 25px;
@@ -37,12 +39,35 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    text-decoration: none; /* Removes underline if it's an <a> tag */
     transition: background 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: var(--dark-blue);
+/* Specific spacing for the Skills Section */
+.skills-text h2 {
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
+
+.skills-description {
+    margin-bottom: 25px; /* This creates the gap between text and button */
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.skills-cta {
+    margin-top: 10px;
+}
+
+/* Responsive fix for the image to ensure it doesn't break layout */
+.skills-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
 
 .section-padding {
     padding: 60px 0;
